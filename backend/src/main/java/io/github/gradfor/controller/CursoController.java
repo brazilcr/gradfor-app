@@ -1,5 +1,6 @@
 package io.github.gradfor.controller;
 
+import io.github.gradfor.dto.CursoSimplesDTO;
 import io.github.gradfor.entity.Curso;
 import io.github.gradfor.service.CursoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,28 +24,32 @@ public class CursoController {
         return new ResponseEntity<>(createdCurso, HttpStatus.CREATED);
     }
 
-    // Obter todos os cursos
     @GetMapping
-    public ResponseEntity<List<Curso>> getAllCursos() {
-        List<Curso> cursos = cursoService.findAll();
-        return new ResponseEntity<>(cursos, HttpStatus.OK);
+    public ResponseEntity<List<Curso>> listarCursos() {
+        List<Curso> cursos = cursoService.listarCursos();
+        return ResponseEntity.ok(cursos);
     }
 
-    // Obter um curso por ID
+    // curso por ID
     @GetMapping("/{id}")
     public ResponseEntity<Curso> getCursoById(@PathVariable Long id) {
         Curso curso = cursoService.findById(id);
         return curso != null ? new ResponseEntity<>(curso, HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    // Atualizar um curso
+    @GetMapping("/listagem-simples")
+    public ResponseEntity<List<CursoSimplesDTO>> listarCursosSimples() {
+        List<CursoSimplesDTO> cursosSimples = cursoService.listarCursosSimples();
+        return ResponseEntity.ok(cursosSimples);
+    }
+
+    // Atualizar
     @PutMapping("/{id}")
     public ResponseEntity<Curso> updateCurso(@PathVariable Long id, @RequestBody Curso curso) {
         Curso updatedCurso = cursoService.update(id, curso);
         return updatedCurso != null ? new ResponseEntity<>(updatedCurso, HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    // Deletar um curso
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCurso(@PathVariable Long id) {
         if (cursoService.delete(id)) {

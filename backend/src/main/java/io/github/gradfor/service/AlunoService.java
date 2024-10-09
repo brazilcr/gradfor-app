@@ -24,6 +24,12 @@ public class AlunoService {
     @Autowired
     private CursoRepository cursoRepository;
 
+    // aluno por ID
+    public Aluno findById(Long id) {
+        Optional<Aluno> alunoOpt = alunoRepository.findById(id);
+        return alunoOpt.orElse(null); // Retorna o aluno ou null se não encontrado
+    }
+
     @Transactional
     public Aluno criarAluno(AlunoDTO alunoDTO) {
         Aluno aluno = new Aluno();
@@ -78,19 +84,20 @@ public class AlunoService {
         alunoRepository.deleteById(id);
     }
 
-    private AlunoDTO converterParaDTO(Aluno aluno) {
+    public AlunoDTO converterParaDTO(Aluno aluno) {
         AlunoDTO alunoDTO = new AlunoDTO();
-        alunoDTO.setId(aluno.getId());
+        alunoDTO.setId(aluno.getId()); // mantém o ID
         alunoDTO.setNome(aluno.getNome());
         alunoDTO.setMatricula(aluno.getMatricula());
         alunoDTO.setCpf(aluno.getCpf());
         alunoDTO.setAtivo(aluno.getAtivo());
-
-        List<CursoInfoDTO> cursosDTO = aluno.getCursos().stream()
-                .map(curso -> new CursoInfoDTO(curso.getId(), curso.getNome()))
-                .collect(Collectors.toList());
-
-        alunoDTO.setCursos(cursosDTO);
+        // Converte cursos para seus IDs
+        if (aluno.getCursos() != null) {
+            List<Long> cursosIds = aluno.getCursos().stream()
+                    .map(Curso::getId)
+                    .collect(Collectors.toList());
+            alunoDTO.setCursosIds(cursosIds);
+        }
 
         return alunoDTO;
     }

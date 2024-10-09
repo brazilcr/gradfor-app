@@ -23,6 +23,7 @@ export class AlunoService {
 
   // POST: Criar novo aluno
   criarAluno(aluno: Aluno): Observable<Aluno> {
+    //console.log(aluno);
     return this.http.post<Aluno>(this.apiUrl, aluno);
   }
 
@@ -37,9 +38,12 @@ export class AlunoService {
   }
 
   getAlunoById(id: number): Observable<Aluno> {
-    return this.http.get<Aluno>(`${this.apiUrl}/${id}`);
+    return this.http.get<Aluno>(`${this.apiUrl}/ver/${id}`);
   }
-
+  buscarAlunoPorId(id: string): Observable<Aluno> {
+    return this.http.get<Aluno>(`${this.apiUrl}/ver/${id}`);
+  }
+  
   createAluno(aluno: Aluno): Observable<Aluno> {
     return this.http.post<Aluno>(this.apiUrl, aluno);
   }

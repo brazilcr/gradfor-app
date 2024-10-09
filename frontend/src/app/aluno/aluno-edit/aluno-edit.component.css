@@ -1,0 +1,19 @@
+mat-card {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  mat-card-title {
+    padding: 16px 24px;
+    font-size: 1.1em;
+    font-weight: bolder;
+  }
+  h3 {
+    font-size: 0.8em;
+    color: burlywood;
+  }

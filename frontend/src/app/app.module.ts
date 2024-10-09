@@ -1,31 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AlunoComponent } from './aluno/aluno/aluno.component';
-import { AlunoListComponent } from './aluno/aluno-list/aluno-list.component';
-import { AlunoDetailsComponent } from './aluno/aluno-details/aluno-details.component';
-import { AlunoCreateComponent } from './aluno/aluno-create/aluno-create.component';
-import { AlunoEditComponent } from './aluno/aluno-edit/aluno-edit.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AlunoModule } from './aluno/aluno.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-  //  AlunoComponent,
- //   AlunoListComponent,
- //   AlunoDetailsComponent
-  ],
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     AlunoModule,
-    //AlunoCreateComponent,
-    //AlunoEditComponent,
+    BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

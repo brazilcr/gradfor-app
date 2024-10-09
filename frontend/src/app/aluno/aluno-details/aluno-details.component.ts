@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { AlunoService } from '../aluno.service';
 import { Aluno } from '../aluno.model';
 
@@ -9,19 +10,36 @@ import { Aluno } from '../aluno.model';
   styleUrls: ['./aluno-details.component.css']
 })
 export class AlunoDetailsComponent implements OnInit {
-  aluno!: Aluno;
+  aluno!: Aluno; // inicializado posteriormente
 
   constructor(
+    private alunoService: AlunoService,
     private route: ActivatedRoute,
-    private alunoService: AlunoService
+    private router: Router
   ) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.alunoService.getAlunoById(+id).subscribe((data: Aluno) => {
-        this.aluno = data;
+    this.route.params.subscribe(params => {
+      const id = +params['id']; 
+      this.alunoService.getAlunoById(id).subscribe(aluno => {
+        this.aluno = aluno;
+      });
+    });
+  }
+
+  excluirAluno(): void {
+    if (this.aluno && this.aluno.id) {
+      this.alunoService.deletarAluno(this.aluno.id).subscribe(() => {
+        // Adicione lógica após a exclusão, se necessário
       });
     }
+  }
+  editarAluno(): void {
+    this.router.navigate(['/alunos/edit', this.aluno.id]);
+  }
+  
+
+  voltar(): void {
+    this.router.navigate(['/alunos']);
   }
 }

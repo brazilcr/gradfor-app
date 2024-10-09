@@ -12,6 +12,11 @@ export class CursoService {
 
   constructor(private http: HttpClient) { }
 
+  listarTodos(): Observable<Curso[]> {
+    
+    return this.http.get<Curso[]>(this.apiUrl+"/listagem-simples");
+  }
+
   // GET: Obter todos os cursos
   getCursos(): Observable<Curso[]> {
     return this.http.get<Curso[]>(this.apiUrl);

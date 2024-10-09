@@ -9,6 +9,7 @@ import { AlunoCreateComponent } from './aluno/aluno-create/aluno-create.componen
 
 const routes: Routes = [
   { path: 'alunos', component: AlunoListComponent },
+  { path: 'alunos/list', component: AlunoListComponent },
   { path: 'alunos/create', component: AlunoCreateComponent },
   { path: 'alunos/edit/:id', component: AlunoEditComponent },
   { path: 'alunos/:id', component: AlunoDetailsComponent },
