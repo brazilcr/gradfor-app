@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Lista de Alunos</h2>
+    <button mat-raised-button color="primary" (click)="incluirAluno()">Incluir Aluno</button>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let aluno"> {{aluno.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef> Nome </th>
+            <td mat-cell *matCellDef="let aluno"> {{aluno.nome}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="acoes">
+            <th mat-header-cell *matHeaderCellDef> Ações </th>
+            <td mat-cell *matCellDef="let aluno">
+                <button (click)="verDetalhes(aluno.id)">Ver Detalhes</button>
+                <button (click)="editarAluno(aluno.id)">Editar</button>
+                <button (click)="deletarAluno(aluno.id)">Deletar</button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <button (click)="incluirAluno()">Incluir Aluno</button>
+</div>
