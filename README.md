@@ -163,9 +163,30 @@ _Instale via docker o keycloak, rode o aplicativo Java/Spring,  execute o fronte
 <!-- USAGE EXAMPLES -->
 ## Uso
 
-Resultados em ambiente de testes.
+Resultados de teste de funcionalidade em ambiente de desenvolvimento. Seguindo ciclo completo das funcionalidades da solução. No cabeçalho perceba o usuário logado e seus papeis de usuário delegados.
 
-(( telas ))
+
+| (1) Ao acessar endpoint http://localhost:4200, redirecionamento para login | (1.1) Papeis cadastrados no keycloak para usuário | (2) após logar-se, sistema vai para listagem de alunos   |
+| :-----: | :---: | :---: |
+| ![gradfor_001](https://github.com/user-attachments/assets/3fd03606-e9dc-4bbd-9f8e-98a495f49b58)  | ![gradfor_001 a8](https://github.com/user-attachments/assets/0a5dc13b-3e5b-454c-8bbd-eb3b488b67fc)   | ![gradfor_002](https://github.com/user-attachments/assets/c78574ec-a470-4e50-a58f-d67400d3c815)   |
+
+| (3) Após clicar incluir aluno  | (4) _'ALuno Hipotético 55'_ é criado | (5) Agora editado o nome para simplesmente _'Aluno 55'_    |
+| :-----: | :---: | :---: |
+| ![gradfor_003](https://github.com/user-attachments/assets/ccb085af-5407-4457-b2ee-ade66a633af1) | ![gradfor_004](https://github.com/user-attachments/assets/51f4a742-baf9-4809-9596-a88a4cbf6a22)   | ![gradfor_005](https://github.com/user-attachments/assets/509bd81a-cb50-4ba9-a112-57111c8810c0)   |
+
+| (6) Atribuído os cursos _'Curso Hipotético 2'_ e _'Curso Hipotético 3'_ ao _'Aluno 55'_ | (7) Checando os detalhes do _'Aluno 55'_    | (8) Ao clicar botão _'Admin'_ no cabeçalho, área isolada para operações admin |
+| :-----: | :---: | :---: |
+| ![gradfor_006](https://github.com/user-attachments/assets/c9e19530-8b58-41b8-98be-333a03263d78) | ![gradfor_007](https://github.com/user-attachments/assets/3b02d3d0-eb19-469c-b00a-b0bc89cdf3de)  | ![gradfor_008](https://github.com/user-attachments/assets/7a1d9e8e-c472-42fb-82ad-ac364091f50b)   |
+
+| (9) Lista de Alunos ao clicar _'Excluir'_ no aluno _'Aluno de todos'_ | (10) Listagem após operação de exclusão do _'Aluno de todos'_  | (11) Demonstração da funcionalidade responsiva das telas construídas com Angular / Material    |
+| :-----: | :---: | :---: |
+| ![gradfor_009](https://github.com/user-attachments/assets/d0178a62-3d15-4e2e-8d2b-ad544dfb7dd8) | ![gradfor_010](https://github.com/user-attachments/assets/c96211c1-06b7-4a44-a8ab-15c09186a4cb)   | ![gradfor_011](https://github.com/user-attachments/assets/4a316bdf-aa3d-427b-be5c-6032b23eabf4)   |
+
+
+
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -188,6 +209,11 @@ Resultados em ambiente de testes.
 - [X] Criação dos módulos
 - [x] Criação dos components
 - [x] Testes de consumo da API
+
+## Roadmap Versão 3
+- [x] Desenvolvimento da integração do angular com keycloak
+- [x] Desenvolvimento da captação dos _'roles'_ pelo angular 
+- [x] Funcionalidade da segurança 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
