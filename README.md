@@ -92,7 +92,7 @@ Em relação as políticas de acesso no backend foi realizado o desenvolvimento 
 
 Para conveniência do teste de funcionalidade, anexo o arquivo 'realm-export.json' com as mesmas funcionalidades do Ream/Keycloak em ambiente de desenvolvimento.
 
-A baixa disponibilidade de espaço no pc pessoal de desenvolvimento não permitiu a criação de um docker file para criação de iamgem docker.
+A baixa disponibilidade de espaço no pc pessoal de desenvolvimento não permitiu a criação de um docker file para criação de imagem docker.
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
