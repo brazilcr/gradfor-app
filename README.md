@@ -51,9 +51,10 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o Desafio
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![gradfor_base](https://github.com/user-attachments/assets/c1ae3e21-c80b-4492-bfef-cec6b9849f2d)
 
 Desenvolver uma aplicação web responsiva para administrar alunos, professores e cursos. Soluções parciais serão aceitas.
+
 
 - [x] Visão de administrador
 - [ ] Incluir, excluir, atualizar e visualizar usuários.
@@ -90,6 +91,8 @@ Em relação as políticas de acesso gerenciadas pelo keycloak, o sistema contem
 Em relação as políticas de acesso no backend foi realizado o desenvolvimento da política do token com chave secreta.
 
 Para conveniência do teste de funcionalidade, anexo o arquivo 'realm-export.json' com as mesmas funcionalidades do Ream/Keycloak em ambiente de desenvolvimento.
+
+A baixa disponibilidade de espaço no pc pessoal de desenvolvimento não permitiu a criação de um docker file para criação de iamgem docker.
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
