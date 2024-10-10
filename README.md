@@ -11,8 +11,8 @@
     <a href="https://github.com/brazilcr/gradfor-app"><strong>Explore o projeto »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/brazilcr/gradfor-app">Ver Demo</a>
-    ·
+    <!-- <a href="https://github.com/brazilcr/gradfor-app">Ver Demo</a>
+    · -->
     <a href="https://github.com/brazilcr/gradfor-app/issues/new?labels=bug&template=bug-report---.md">Reportar Bugs</a>
     ·
     <a href="https://github.com/brazilcr/gradfor-app/issues/new?labels=enhancement&template=feature-request---.md">Solicitar Features</a>
@@ -55,12 +55,12 @@
 
 Desenvolver uma aplicação web responsiva para administrar alunos, professores e cursos. Soluções parciais serão aceitas.
 
-- [ ] Visão de administrador
+- [x] Visão de administrador
 - [ ] Incluir, excluir, atualizar e visualizar usuários.
-- [ ] Visão de coordenador de cursos
+- [x] Visão de coordenador de cursos
 - [ ] Incluir, excluir, atualizar e visualizar os semestres, cursos e disciplinas;
 - [ ] Realizar a montagem da matriz curricular.
-- [ ] Visão de professor e aluno
+- [x] Visão de professor e aluno
 - [ ] Visualizar a matriz curricular.
 
 ## Escopo do desafio
@@ -77,7 +77,19 @@ etc.)
 - [ ] O desenvolvimento deve utilizar como padrão o docker e docker-compose para
 orquestrar a aplicação.
 
+## Observações do desenvolvedor
 
+Atividades em demasia numa única sprint de 5 dias, me fez focar naquilo de mais necessário para o processo de avaliação do RH. Nisso, todas atividades entendidas como redundância da exposição de conhecimento com as ferramentas não foram feitas.
+
+No aplicativo frontend, encontramos completo CRUD da entidade ALUNOS. Então, o desenvolvimento de professores e cursos foram desconsideradas. Importante ressaltar que validações de campos na interface de UX não foram consideradas.
+
+No backend, a API contempla todas operações para a entidade ALUNOS. Então para entidades CURSO contemplamos alguns endpoints e a estruturação daquilo que mostra uma típica relação _'ManyToMany'_.
+
+Em relação as políticas de acesso gerenciadas pelo keycloak, o sistema contempla plena integração com essa atividade. Pela sprint curta, todas as operações CRUD com usuários não foram implementadas.
+
+Em relação as políticas de acesso no backend foi realizado o desenvolvimento da política do token com chave secreta.
+
+Para conveniência do teste de funcionalidade, anexo o arquivo 'realm-export.json' com as mesmas funcionalidades do Ream/Keycloak em ambiente de desenvolvimento.
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 

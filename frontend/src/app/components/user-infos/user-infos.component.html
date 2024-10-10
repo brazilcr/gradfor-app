@@ -1,0 +1,34 @@
+<div class="user-infos">
+    <div class="user-infos__container">
+        <form [formGroup]="userInfosForm">
+            <div class="user-infos__title">
+                <h3 class="poppins-semibold">Informações do Usuário</h3>
+                <p class="poppins-light">Atualização dos dados do usuário</p>
+            </div>
+            <div class="user-infos__row">
+                <div class="user-infos__fields">
+                    <p class="poppins-regular">Nome:</p>
+                    <input class="poppins-regular" placeholder="Digite o seu nome" formControlName="name" />
+                </div>
+                <div class="user-infos__fields">
+                    <p class="poppins-regular">Email:</p>
+                    <input class="poppins-regular" placeholder="Digite o seu email" formControlName="email" />
+                </div>
+            </div>
+            <div class="user-infos__row">
+                <div class="user-infos__fields">
+                    <p class="poppins-regular">Usuário:</p>
+                    <input class="poppins-regular" placeholder="Digite o seu usuário" formControlName="username" />
+                </div>
+                <div class="user-infos__fields">
+                    <p class="poppins-regular">Senha:</p>
+                    <input class="poppins-regular" placeholder="Digite a sua senha" formControlName="password" />
+                </div>
+            </div>
+              <div class="user-infos__buttons-container">
+                <button type="button" class="poppins-regular user-infos__send-button user-infos__send-button--create">Criar Usuário</button>
+                <button type="button" class="poppins-regular user-infos__send-button user-infos__send-button--update">Atualizar Existente</button>
+            </div>
+        </form>
+    </div>
+</div>

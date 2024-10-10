@@ -1,0 +1,11 @@
+<mat-toolbar class="fixed-header">
+    <span>Gradfor App</span>
+    <span class="spacer"></span> 
+    <div class="button-container"> 
+        <span>{{ username }} </span>
+        <span *ngIf="roles.length > 0"> ({{ roles.join(', ') }})</span>
+        <button mat-button *ngIf="!isLoggedIn()" routerLink="/login">Login</button>
+        <button mat-button *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+        <button mat-button *ngIf="isAdmin()" routerLink="/admin">Admin</button>
+    </div>   
+</mat-toolbar>

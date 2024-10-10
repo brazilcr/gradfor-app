@@ -34,7 +34,7 @@ export class AlunoListComponent implements OnInit {
   listarAlunos(): void {
     this.alunoService.listarTodos().subscribe(
       (alunos) => {
-        console.log(alunos);
+        //console.log(alunos);
         this.dataSource = new MatTableDataSource(alunos);
         //this.dataSource.data = alunos;
       },

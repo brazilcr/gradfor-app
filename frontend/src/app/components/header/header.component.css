@@ -1,0 +1,35 @@
+.fixed-header {
+    position: fixed;
+    padding: 10px 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    z-index: 1000;
+    background-color: #642257;
+    color: #fff;
+    font-weight: 500;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.button-container {
+    float: right;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+mat-toolbar {
+    padding: 0 16px;
+}
+
+.table-container {
+    margin: 20px;
+}
+
+table.mat-mdc-table {
+    width: 100%;
+}

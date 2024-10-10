@@ -1,0 +1,12 @@
+<div class="login-container">
+    <h2 *ngIf="!isLoggedIn()">Você não está logado</h2>
+    <h2 *ngIf="isLoggedIn()">Bem-vindo, {{ getUserName() }}!</h2>
+
+    <button mat-raised-button color="primary" *ngIf="!isLoggedIn()" (click)="login()">
+        Fazer Login
+    </button>
+
+    <button mat-raised-button color="warn" *ngIf="isLoggedIn()" (click)="logout()">
+        Logout
+    </button>
+</div>

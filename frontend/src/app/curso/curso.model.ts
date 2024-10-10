@@ -1,5 +1,5 @@
 export class Curso {
-    id?: number; // ID do curso, opcional para novas criações
+    id?: number; 
     nome: string;
   
     constructor(nome: string) {

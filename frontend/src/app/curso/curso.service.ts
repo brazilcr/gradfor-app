@@ -17,22 +17,18 @@ export class CursoService {
     return this.http.get<Curso[]>(this.apiUrl+"/listagem-simples");
   }
 
-  // GET: Obter todos os cursos
   getCursos(): Observable<Curso[]> {
     return this.http.get<Curso[]>(this.apiUrl);
   }
 
-  // POST: Criar novo curso
   criarCurso(curso: Curso): Observable<Curso> {
     return this.http.post<Curso>(this.apiUrl, curso);
   }
 
-  // PUT: Atualizar curso existente
   atualizarCurso(id: number, curso: Curso): Observable<Curso> {
     return this.http.put<Curso>(`${this.apiUrl}/${id}`, curso);
   }
 
-  // DELETE: Remover curso
   deletarCurso(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }

@@ -10,7 +10,7 @@ import { Aluno } from '../aluno.model';
   styleUrls: ['./aluno-details.component.css']
 })
 export class AlunoDetailsComponent implements OnInit {
-  aluno!: Aluno; // inicializado posteriormente
+  aluno!: Aluno; 
 
   constructor(
     private alunoService: AlunoService,
@@ -30,7 +30,6 @@ export class AlunoDetailsComponent implements OnInit {
   excluirAluno(): void {
     if (this.aluno && this.aluno.id) {
       this.alunoService.deletarAluno(this.aluno.id).subscribe(() => {
-        // Adicione lógica após a exclusão, se necessário
       });
     }
   }

@@ -42,7 +42,7 @@ export class AlunoEditComponent implements OnInit {
       this.cursos = cursos
         .filter(curso => curso.id !== undefined) 
         .map(curso => ({
-          id: curso.id!, // asserção não nula
+          id: curso.id!, 
           nome: curso.nome,
           selected: this.selectedCursosIds.includes(curso.id!) 
         }));
@@ -57,7 +57,6 @@ export class AlunoEditComponent implements OnInit {
 
   atualizarAluno(): void {
     if (this.aluno.id !== undefined) {
-      // Atualiza a lista de IDs dos cursos selecionados
       this.selectedCursosIds = this.cursos
         .filter(curso => curso.selected)
         .map(curso => curso.id!);
@@ -71,7 +70,6 @@ export class AlunoEditComponent implements OnInit {
         cursosIds: this.selectedCursosIds
       };
 
-      //console.log('Cursos selecionados:', alunoAtualizado.cursosIds); // Verifique aqui
       this.alunoService.atualizarAluno(this.aluno.id, alunoAtualizado).subscribe(() => {
         this.router.navigate(['/alunos']);
       });

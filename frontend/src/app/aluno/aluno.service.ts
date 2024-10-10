@@ -16,23 +16,19 @@ export class AlunoService {
     return this.http.get<Aluno[]>(this.apiUrl);
   }
 
-  // GET: Obter todos os alunos
   getAlunos(): Observable<Aluno[]> {
     return this.http.get<Aluno[]>(this.apiUrl);
   }
 
-  // POST: Criar novo aluno
   criarAluno(aluno: Aluno): Observable<Aluno> {
     //console.log(aluno);
     return this.http.post<Aluno>(this.apiUrl, aluno);
   }
 
-  // PUT: Atualizar aluno existente
   atualizarAluno(id: number, aluno: Aluno): Observable<Aluno> {
     return this.http.put<Aluno>(`${this.apiUrl}/${id}`, aluno);
   }
 
-  // DELETE: Remover aluno
   deletarAluno(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
