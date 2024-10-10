@@ -84,7 +84,7 @@ Atividades em demasia numa única sprint de 5 dias, me fez focar naquilo de mais
 
 No aplicativo frontend, encontramos completo CRUD da entidade ALUNOS. Então, o desenvolvimento de professores e cursos foram desconsideradas. Importante ressaltar que validações de campos na interface de UX não foram consideradas.
 
-No backend, a API contempla todas operações para a entidade ALUNOS. Então para entidades CURSO contemplamos alguns endpoints e a estruturação daquilo que mostra uma típica relação _'ManyToMany'_.
+No backend, a API contempla todas operações para a entidade ALUNO. Então para entidades CURSO contemplamos alguns endpoints e a estruturação daquilo que mostra uma típica relação _'ManyToMany'_.
 
 Em relação as políticas de acesso gerenciadas pelo keycloak, o sistema contempla plena integração com essa atividade. Pela sprint curta, todas as operações CRUD com usuários não foram implementadas.
 
