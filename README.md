@@ -56,41 +56,41 @@
 Desenvolver uma aplicação web responsiva para administrar alunos, professores e cursos. Soluções parciais serão aceitas.
 
 
-- [x] Visão de administrador
+- [x] Visão de administrador :heavy_check_mark:
 - [ ] Incluir, excluir, atualizar e visualizar usuários.
-- [x] Visão de coordenador de cursos
+- [x] Visão de coordenador de cursos :heavy_check_mark:
 - [ ] Incluir, excluir, atualizar e visualizar os semestres, cursos e disciplinas;
 - [ ] Realizar a montagem da matriz curricular.
-- [x] Visão de professor e aluno
+- [x] Visão de professor e aluno :heavy_check_mark:
 - [ ] Visualizar a matriz curricular.
 
 ## Escopo do desafio
 
 Em arquivo PDF a solicitação enviada por whatsapp foi:
-- [x] Desenvolver os módulos de frontend e backend (API Rest) de forma separada.
-- [x] desenvolvimento do backend deve ser feito em linguagem Java utilizando o
-framework Quarkus.
+- [x] Desenvolver os módulos de frontend e backend (API Rest) de forma separada. :heavy_check_mark:
+- [x] desenvolvimento do backend deve ser feito em linguagem Java utilizando o 
+framework Quarkus. :heavy_check_mark:
 - [x] A aplicação backend e frontend devem ser seguras, implementando políticas de
-acesso gerenciadas pelo keycloak.
-- [x] O desenvolvimento do frontend deve utilizar o Angular 15+ (standalone).
+acesso gerenciadas pelo keycloak. :heavy_check_mark:
+- [x] O desenvolvimento do frontend deve utilizar o Angular 15+ (standalone). :heavy_check_mark:
 - [x] O banco de dados pode ser qualquer banco relacional, exemplo (mysql, postgres,
-etc.)
+etc.) :heavy_check_mark:
 - [ ] O desenvolvimento deve utilizar como padrão o docker e docker-compose para
 orquestrar a aplicação.
 
 ## Observações do desenvolvedor
 
-Atividades em demasia numa única sprint de 5 dias, me fez focar naquilo de mais necessário para o processo de avaliação do RH. Nisso, todas atividades entendidas como redundância da exposição de conhecimento com as ferramentas não foram feitas.
+Atividades em demasia numa única sprint de 5 dias, me fez focar naquilo de mais necessário para o processo de avaliação do RH. Nisso, todas atividades entendidas como redundantes (da exposição de conhecimento com as ferramentas) foram colocadas como não prioritárias e pelo tempo bastante curto, findou que não foram realizadas. Aquelas marcadas acima com ' :heavy_check_mark: ' foram executadas.
 
-No aplicativo frontend, encontramos completo CRUD da entidade ALUNOS. Então, o desenvolvimento de professores e cursos foram desconsideradas. Importante ressaltar que validações de campos na interface de UX não foram consideradas.
+No aplicativo frontend, encontramos completo CRUD da entidade ALUNO. Então, o desenvolvimento de professores e cursos não foi possível. Regras de validações de campos na interface também inexistem.
 
 No backend, a API contempla todas operações para a entidade ALUNO. Então para entidades CURSO contemplamos alguns endpoints e a estruturação daquilo que mostra uma típica relação _'ManyToMany'_.
 
 Em relação as políticas de acesso gerenciadas pelo keycloak, o sistema contempla plena integração com essa atividade. Pela sprint curta, todas as operações CRUD com usuários não foram implementadas.
 
-Em relação as políticas de acesso no backend foi realizado o desenvolvimento da política do token com chave secreta.
+Em relação as políticas de acesso no backend foi realizado o desenvolvimento da política do token com chave secreta no que preconiza o OAuth 2.0.
 
-Para conveniência do teste de funcionalidade, anexo o arquivo 'realm-export.json' com as mesmas funcionalidades do Ream/Keycloak em ambiente de desenvolvimento.
+Para conveniência do teste de funcionalidade, anexo o arquivo 'realm-export.json' com as mesmas funcionalidades do Realm/Keycloak em ambiente de desenvolvimento.
 
 A baixa disponibilidade de espaço no pc pessoal de desenvolvimento não permitiu a criação de um docker file para criação de imagem docker.
 
@@ -224,9 +224,9 @@ Resultados de teste de funcionalidade em ambiente de desenvolvimento. Seguindo c
 <!-- CONTACT -->
 ## Contato
 
-Cláudio Baima - [@your_linkedin]https://www.linkedin.com/in/baima/ - baimaclaudio@gmail.com
+Cláudio Baima [![Linkedin](https://skillicons.dev/icons?i=linkedin&perline=2)](https://www.linkedin.com/in/baima/) [![Linkedin](https://skillicons.dev/icons?i=gmail&perline=2)](mailto:baimaclaudio@gmail.com)  
 
-Link do Projeto : [https://github.com/brazilcr/gradfor-app](https://github.com/brazilcr/gradfor-app)
+Link do Projeto [![Github](https://skillicons.dev/icons?i=github&perline=2)](https://github.com/brazilcr/gradfor-app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
